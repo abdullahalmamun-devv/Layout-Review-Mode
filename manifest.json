@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Layout Review Mode",
+  "version": "0.1.0",
+  "description": "Temporarily rearrange and hide PuraMini storefront sections for client review without changing the deployed site.",
+  "permissions": [],
+  "host_permissions": [
+    "https://staging.puramini.care/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Toggle Layout Review Mode"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://staging.puramini.care/*"],
+      "js": ["src/core.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

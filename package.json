@@ -1,0 +1,10 @@
+{
+  "name": "layout-review-mode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser-only layout review extension for PuraMini staging.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/core.js && node --check src/content.js && node --check src/background.js"
+  }
+}
